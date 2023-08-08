@@ -14,7 +14,7 @@ export class NavComponent {
     //this keeps the url tidy, and makes sure users will never be unexpectedly redirected to a different page.
     $event.preventDefault();
 
-    this.modal.toggleModal();
+    this.modal.toggleModal('auth');
   }
 
   constructor(public modal: ModalService){
