@@ -12,9 +12,7 @@ export class ModalComponent {
 
   @Input() modalID = '';
 
-  constructor(public modal: ModalService){
-    //console.log("KG testing1: " + modal.visible);
-  }
+  constructor(public modal: ModalService){ }
 
   //not necessary to create, but calling a 'closeModal()' function in the HTML template 
   //just looks tidier than calling a 'modal.toggleModal()' function

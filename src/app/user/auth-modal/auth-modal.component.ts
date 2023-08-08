@@ -12,8 +12,7 @@ export class AuthModalComponent {
     //register() will allow us to register a new modal w/ our service
     //1 argument - the new modal's ID
     this.modal.register('auth');
-    //this.modal.register('test');
-    //NOTE: bug! for some reason, .register() only works if it matches the FIRST <app-modal>'s ID from the auth-modal template
+    //this value is hardcoded & matches the 'modalID' property value in the auth-modal HTML template
   }
 
 }

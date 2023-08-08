@@ -14,6 +14,8 @@ export class NavComponent {
     //this keeps the url tidy, and makes sure users will never be unexpectedly redirected to a different page.
     $event.preventDefault();
 
+    //for now, this is used for the login/register button
+    //the hardcoded 'auth' value matches the ModalID values found in auth-modal & modal components
     this.modal.toggleModal('auth');
   }
 
