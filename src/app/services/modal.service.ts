@@ -53,7 +53,22 @@ export class ModalService {
       id,
       visible: false
     })
-    //console.log(this.modals);
+  }
+
+  unregister(id: string) {
+
+    //console.log("KG before: " + "..." + JSON.stringify(this.modals))
+    this.modals = this.modals.filter(
+      (element) => {
+        console.log("KG checking: " + JSON.stringify(element.id !== id));
+        element.id !== id 
+      }
+    )
+    //console.log("KG after: " + this.modals);
+
+    //id = 'auth'
+    //array = [auth, bibi, cabu]
+    //auth !== auth
   }
 
   constructor() { }
