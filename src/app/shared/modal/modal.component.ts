@@ -1,4 +1,4 @@
-import { Component, Input, ElementRef } from '@angular/core';
+import { Component, Input, ElementRef, OnDestroy, OnInit} from '@angular/core';
 import { ModalService } from 'src/app/services/modal.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { ModalService } from 'src/app/services/modal.service';
   //providers: [ModalService]
 })
 
-export class ModalComponent {
+export class ModalComponent implements OnInit, OnDestroy{
 
   @Input() modalID = '';
 
@@ -19,6 +19,10 @@ export class ModalComponent {
   ngOnInit(): void {
     //WARNING: this not only appends, but it literally MOVES the whole element to the child position of 'body'.
     document.body.appendChild(this.eleRef.nativeElement);
+  }
+
+  ngOnDestroy(): void {
+    document.body.removeChild(this.eleRef.nativeElement);
   }
 
   //not necessary to create, but calling a 'closeModal()' function in the HTML template 

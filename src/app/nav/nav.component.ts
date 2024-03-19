@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ModalService } from '../services/modal.service';
+import { AuthService } from '../services/auth.service'; 
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-nav',
@@ -19,8 +21,19 @@ export class NavComponent {
     this.modal.toggleModal('auth');
   }
 
-  constructor(public modal: ModalService){
+  constructor(
+    public modal: ModalService,
+    public auth: AuthService,
+    private afAuth: AngularFireAuth
+    ){
 
+  }
+
+  async logout($event: Event) {
+    // clicks on 'a' elements can refresh the page - this prevents that behavior
+    $event.preventDefault();
+
+    await this.afAuth.signOut()
   }
 
 }
