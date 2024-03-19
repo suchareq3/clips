@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  //using an object here isn't necessary - it just looks neat uwu
+  credentials = {
+    email: '',
+    password: ''
+  }
+
+  login() {
+    console.log(this.credentials);
+  }
+
 }
