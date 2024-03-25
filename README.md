@@ -1,5 +1,5 @@
 # Clips
-Angular website for uploading, watching, and sharing video clips. Uses Firebase as backend for user authentication. 
+Single-page Angular application for uploading, watching, and sharing video clips. Uses Firebase as backend for user authentication. 
 
 ## Current features
 - Reactive & template forms
