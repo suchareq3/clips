@@ -1,6 +1,8 @@
 # Clips
 Single-page Angular application for uploading, watching, and sharing video clips. Uses Firebase as backend for user authentication. WORK IN PROGRESS!
 
+Available here: https://clips-suchareq3.vercel.app/
+
 ## Current features
 - Reactive & template forms
 - Form field validation, including asynchronous validation for the email field
